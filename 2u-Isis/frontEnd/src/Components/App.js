@@ -1,10 +1,10 @@
 import React from 'react';
-import Profile from './Profile';
+import ShopCar from './ShopCar';
 
 function App() {
   return (
       <div>
-        <Profile/>
+        <ShopCar/>
       </div>
   );
 }
