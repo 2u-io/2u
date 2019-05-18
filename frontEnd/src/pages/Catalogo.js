@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Header from '../Components/Header'
 import axios from 'axios'
+import Loading from '../Components/Loading'
 
 export default class Catalogo extends Component {
     constructor(props){
         super(props);
         this.state={
-          productos:[]
+          productos:[],
+          loading:true
         }
     }
     
@@ -14,7 +16,8 @@ export default class Catalogo extends Component {
     async componentDidMount(){
         const resp = await axios.get('https://jsonplaceholder.typicode.com/photos?albumId=1')
         this.setState({
-          productos:resp.data
+          productos:resp.data,
+          loading:false
         })
     }
 
@@ -40,6 +43,9 @@ export default class Catalogo extends Component {
     )
 
     render() {
+        if(this.state.loading===true){
+            return  <Loading/>
+        }
     return (
       <div>
         <Header/>

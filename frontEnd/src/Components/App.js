@@ -5,6 +5,8 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Catalogo from '../pages/Catalogo'
 import CreateAccount from '../pages/CreateAccount'
+import Profile from '../pages/ProfileConfig'
+import Car from '../pages/Car'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={CreateAccount} />
           <Route exact path="/catalogo" component={Catalogo} />
+          <Route exact path="/perfil" component={Profile} />
+          <Route exact path="/shopcar" component={Car} />
         </Switch>
     </BrowserRouter>
   );

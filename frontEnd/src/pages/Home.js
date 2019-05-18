@@ -4,6 +4,8 @@ import Header from '../Components/Header'
 import Galeria from '../Components/Galeria'
 import axios from 'axios'
 
+import './styles/Home.css'
+
 export default class Home extends Component {
 
     constructor(props){
@@ -25,10 +27,12 @@ export default class Home extends Component {
       <React.Fragment>
         <Header/>
         <Galeria/>
-        <div>
-            <h1>
-                Welcome to 2U
-            </h1>
+        <div className='welcome row'>
+            <div className="center-align">
+                <h1>
+                    Welcome to 2U
+                </h1>
+            </div>
         </div>
         <div>
             <h2>

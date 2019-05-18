@@ -5,7 +5,7 @@ const Galeria = () => {
     return (
         <React.Fragment>
             <Carousel options={{fullWidth: true,indicators: true}} images={[
-            'https://picsum.photos/250/250?image=0',
+            'https://www.sanlorenzos.ie/wp-content/uploads/2014/11/Gift-Card-small.jpg',
             ]} />
         </React.Fragment>
     );
