@@ -9,6 +9,7 @@ const Header = () => {
                 <Navbar className='red darken-3' brand={<Link to='/'><img src="" alt="Logo"/></Link>} centerLogo alignLinks="left">
                     <NavLink to="/catalogo" activeClassName="active">Catalogo</NavLink>
                     <NavLink to="/login" activeClassName="active">Login</NavLink>
+                    <NavLink to="/signup" activeClassName="active">Sign Up</NavLink>
                 </Navbar>
             </React.Fragment>
         </div>
