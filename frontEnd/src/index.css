@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.imgFondo{
+  background-image: url('image/portada.jpg');
+}
+.navTrans{
+  background-color: rgba(0, 0, 0, 0.219);
+}
+.logop{
+  margin:.5rem 0 0 1rem;
+
+}
+.brand-logo{
+  width: 100px;
+}
+.portada{
+  width: 100%;
+  height: 100vh;
+}
