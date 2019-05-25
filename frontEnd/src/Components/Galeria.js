@@ -1,6 +1,6 @@
 import React from 'react';
 import {Carousel} from 'react-materialize';
-import logo from './image/portada.jpg'
+import logo from './image/portada.png'
 
 const Galeria = () => {
     return (

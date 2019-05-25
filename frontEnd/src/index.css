@@ -1,3 +1,7 @@
+@font-face{
+  font-family: 'letraLogo';
+  src: url(Components/fonts/RamadhanKareem.ttf), url(Components/fonts/RamadhanKareem.otf);
+}
 *{
   margin: 0;
   padding: 0;
@@ -15,10 +19,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.imgFondo{
-  background-image: url('image/portada.jpg');
-}
-
 .navTrans{
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -36,4 +36,21 @@ code {
 }
 .tarjetas{
   margin-top: 5rem;
+}
+h1{
+  font-family: 'letraLogo';
+  color: lightcoral;  
+}
+.iconos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width:768px){
+  .iconos{
+    display: flex;
+    flex-direction: row;
+  }
 }

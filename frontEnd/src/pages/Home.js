@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../Components/Header'
 import Galeria from '../Components/Galeria'
-import axios from 'axios'
+import axios from 'axios';
+import regalo from '../Components/image/new-product.png';
+import tienda from '../Components/image/retail.png';
+import mapa from '../Components/image/map-location.png';
+import present from '../Components/image/present.png';
 
-import './styles/Home.css'
 
 export default class Home extends Component {
 
@@ -34,10 +37,24 @@ export default class Home extends Component {
                 </h1>
             </div>
         </div>
-        <div>
-            <h2>
-                Steps
-            </h2>
+        <div className="iconos">
+          <div className="regalo">
+          <img src={regalo} alt="" className="iconosSection"/>
+          <p className="subtitle">Choose your gifts</p>
+          </div>
+          <div className="regalo">
+          <img src={tienda} alt="" className="iconosSection"/>
+          <p className="subtitle">Choose your gifts</p>
+          </div>
+          <div className="regalo">
+          <img src={mapa} alt="" className="iconosSection"/>
+          <p className="subtitle">Choose your gifts</p>
+          </div>
+          <div className="regalo">
+          <img src={present} alt="" className="iconosSection"/>
+          <p className="subtitle">Choose your gifts</p>
+          </div>
+            
         </div>
 
         <Link to='/catalogo' className='btn'>Empezar</Link>
