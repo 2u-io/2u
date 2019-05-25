@@ -6,7 +6,7 @@ import logoP from './image/logo.png';
 const Header = () => {
     return (
         <React.Fragment>
-            <Navbar className='right hide-on-med-and-down navTrans' brand={<Link to='/'><img src={logoP} alt="Logo" className="logop"/></Link>}  alignLinks="right">
+            <Navbar className='navTrans' brand={<Link to='/'><img src={logoP} alt="Logo" className="logop"/></Link>}  alignLinks="right">
                 <NavLink to="/login" activeClassName="active">Login</NavLink>
                 <NavLink to="/signup" activeClassName="active">Sign Up</NavLink>
                 <NavLink to="/catalogo" activeClassName="active">Tiendas</NavLink>
