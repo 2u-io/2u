@@ -27,13 +27,13 @@ export default class Catalogo extends Component {
                 <div class="col s2 m2">
                     <div class="card">
                         <div class="card-image">
-                            <img src={producto.url}/>
+                            <img src={producto.url} alt='productos'/>
                             <span class="card-title">{producto.title}</span>
                         </div>
                         <div class="card-content">
                         </div>
                         <div class="card-action">
-                            <a href="#">{producto.thumbnailUrl}</a>
+                            <a href="/">{producto.thumbnailUrl}</a>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,10 @@
 import React from 'react';
-import {Carousel} from 'react-materialize'
+import logo from './image/portada.png'
 
 const Galeria = () => {
     return (
         <React.Fragment>
-            <Carousel options={{fullWidth: true,indicators: true}} images={[
-            'https://www.sanlorenzos.ie/wp-content/uploads/2014/11/Gift-Card-small.jpg',
-            ]} />
+            <img src={logo} alt="" className="portada"/>
         </React.Fragment>
     );
 }

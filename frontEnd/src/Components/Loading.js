@@ -4,11 +4,13 @@ import {Row,Col,Preloader} from 'react-materialize'
 const Loading = () => {
     return (
         <React.Fragment>
-            <Row>
-                <Col s={4}>
-                    <Preloader size="small" />
-                </Col>
-            </Row>
+            <div className="tarjetas">
+                <Row>
+                    <Col s={4}>
+                        <Preloader size="small" />
+                    </Col>
+                </Row>
+            </div>
         </React.Fragment>
     );
 }
