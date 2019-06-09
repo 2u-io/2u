@@ -1,0 +1,56 @@
+@font-face{
+  font-family: 'letraLogo';
+  src: url(Components/fonts/RamadhanKareem.ttf), url(Components/fonts/RamadhanKareem.otf);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.navTrans{
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+}
+.logop{
+  margin:.5rem 0 0 1rem;
+
+}
+.brand-logo{
+  width: 100px;
+}
+.portada{
+  width: 100%;
+  height: 100vh;
+}
+.tarjetas{
+  margin-top: 5rem;
+}
+h1{
+  font-family: 'letraLogo';
+  color: lightcoral;  
+}
+.iconos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width:768px){
+  .iconos{
+    display: flex;
+    flex-direction: row;
+  }
+}
