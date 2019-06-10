@@ -36,6 +36,7 @@ export default class Home extends Component {
     }
 
     handleUser=e=> {
+      console.log(e.target.value);
       this.setState({user: e.target.value});
     }
 
@@ -44,7 +45,7 @@ export default class Home extends Component {
     }
   
     handleSubmit=e=> {
-      //alert('A name was submitted: ' + this.state.user);
+      alert('A name was submitted: ' + this.state.user);
       console.log('A Username was submitted:'+this.state.user)
       console.log('A Password was submitted'+this.state.password)
       e.preventDefault();
@@ -70,6 +71,9 @@ export default class Home extends Component {
           onCloseModal={this.handleCloseModal}
           onOpenModal={this.handleOpenModal}
           modalIsOpen={this.state.modalIsOpen}
+          onClickLogin={this.handleSubmit}
+          handleUser={this.handleUser}
+          handlePassword={this.handlePassword}
         />
         <Galeria/>
         <div className='welcome row'>

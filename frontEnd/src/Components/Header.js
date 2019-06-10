@@ -13,6 +13,9 @@ const Header = (props) => {
                     <SignIn 
                         isOpen={props.modalIsOpen}
                         onClose={props.onCloseModal}
+                        onClickButton={props.onClickLogin}
+                        handleUser={props.handleUser}
+                        handlePassword={props.handlePassword}
                     />
                 </div>
                 <NavLink to="/signup" activeClassName="active">Sign Up</NavLink>
