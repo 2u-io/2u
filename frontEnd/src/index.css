@@ -54,3 +54,15 @@ h1{
     flex-direction: row;
   }
 }
+
+.imgNosotros{
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  margin: 3rem auto;
+}
+.texNosotros{
+  background-color: rgba(0, 0, 0, 0.192);
+  mar
+  position: absolute;
+}
