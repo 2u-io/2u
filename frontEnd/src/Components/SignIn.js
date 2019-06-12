@@ -23,7 +23,7 @@ function SignIn(props) {
                     <button onClick={props.onClickButton} type="button" className='btn green'>Ingresar</button>
                 </div>
                 <div className="col s6">
-                    <button className='btn red'>Cancelar</button>
+                    <button onClick={props.onClose} className='btn red'>Cancelar</button>
                 </div>
             </div>
         </form>
