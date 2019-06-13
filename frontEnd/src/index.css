@@ -45,19 +45,146 @@ code {
 }
 
 /*estilo para la imagen de fondo*/
-.imagen-fondo{
+.hero{
   background-image: url(Components/image/portada.jpg);
+  height: 100vh;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.imagenGrande{
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.logo{
+  animation-name: logo;
+  animation-duration: 10s;
+}
+.contenedor-h{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'letraLogo';
+  color: whitesmoke;
+  font-size: 5em;
+}
+.textCur{
+ height: 100px;
+ margin: 0;
+}
+span {
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center;
+  animation-duration: 5s;
+  animation-name: slogan;
+}
+.ideal{
+  animation-name: ideal;
+  animation-duration: 7s;
+}
+.char1 {
+  transform: rotate(-33deg);
+  
+}
+.char2 {
+  transform: rotate(-26deg);
+  
+}
+.char3 {
+  transform: rotate(-14.5deg);
+  
+}
+.char4 {
+  transform: rotate(-8deg);
+  
+}
+.char5 {
+  transform: rotate(-5deg);
+  
+}
+.char6 {
+  transform: rotate(-1deg);
+  
+}
+.char7 {
+  transform: rotate(3deg);
+  
+}
+.char8 {
+  transform: rotate(6deg);
+  
+}
+.char9 {
+  transform: rotate(16deg);
+  
+}
+.char10 {
+  transform: rotate(20deg);
+  
+}
+.char11 {
+  transform: rotate(24deg);
+  
+}
+.char12 {
+  transform: rotate(27deg);
+  
+}
+.char13 {
+  transform: rotate(31deg);
+  
+}
+/*animation para las letras*/
+@keyframes slogan{
+  0%{
+    font-size: 0em;
+  }
+  50% {
+    font-size: 1em;
+  }
+  100%{
+    font-size: 1em;
+  }
+}
+@keyframes ideal{
+  0%{
+    font-size: 0em;
+  }
+  50% {
+    font-size: 0em;
+  }
+  75%{
+    font-size: 1em;
+  }
+  100% {
+    font-size: 1em;
+  }
+}
+@keyframes logo{
+  0%{
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  750% {
+    width: 40%;
+  }
+  100% {
+    width: 40%;
+  }
 }
 
 /* estilos para el menu de navegacion*/
 .navTrans{
   background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
 }
 .logop{
   margin:.5rem 0 0 1rem;
@@ -89,7 +216,7 @@ code {
   text-align: center;
   width: 17rem;
 }
-.btn{
+.btn-home{
   margin: 1rem;
 }
 
@@ -109,6 +236,7 @@ code {
   background-image: url(Components/image/equipo.jpg);
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   height: 30rem;
   display: flex;
   justify-content: center;
@@ -123,9 +251,6 @@ code {
   text-align: center;
   font-family: 'cuerpo';
   font-weight: 600;
-}
-.texNosotros span{
-  font-size: 3rem;
 }
 /*seccion de tipos de producctos */
 .tipo-productos{
@@ -182,7 +307,7 @@ code {
 }
 /*estilos para el footer*/
 footer{
-  padding: 2rem;
+  padding: 1rem;
   background-color: lightblue;
   margin-top: 4rem;
   display: flex;

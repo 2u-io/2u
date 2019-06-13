@@ -36,16 +36,34 @@ export default class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <header className="imagen-fondo">
           <Header/>        
-          <div className="imagenGrande">
-            <img src={logo} alt="" className="logoGrande"/>
+        <header className="header hero">
+          <div className="header-contenido">
+            <div className="contenedor-h">
+              <p className="textCur">
+                <span className="char1">U</span>
+                <span className="char2">n</span>
+                <span className="char3">R</span>
+                <span className="char4">e</span>
+                <span className="char5">g</span>
+                <span className="char6">a</span>
+                <span className="char7">l</span>
+                <span className="char8">o</span>
+                <span className="char9">I</span>
+                <span className="char10">d</span>
+                <span className="char11">e</span>
+                <span className="char12">a</span>
+                <span className="char13">l</span>
+              </p>
+              <img src={logo} alt="" className="logo"/>
+              <p className="ideal">Para la Persona Ideal</p>
+            </div>
           </div>
         </header>
         <div className='welcome row'>
             <div className="center-align">
                 <h1>
-                    Welcome to 2U
+                    Bienvenidoss a 2U
                 </h1>
             </div>
         </div>
@@ -53,30 +71,24 @@ export default class Home extends Component {
           <div className="regalo">
             <img src={regalo} alt="" className="iconosSection"/>
             <p className="subtitle">Ropa, Juguetes, accesorios todo tipo de regalos, para esa persona ideal.</p>
-            <Link to='/catalogo' className='btn'>Entrar</Link>
+            <Link to='/catalogo' className='btn btn-home'>Entrar</Link>
           </div>
           <div className="regalo">
             <img src={tienda} alt="" className="iconosSection"/>
             <p className="subtitle">Miles de tiendas de regalos y diseños de envolturas a tu alcance.</p>
-            <Link to='/catalogo' className='btn'>Entrar</Link>
+            <Link to='/catalogo' className='btn btn-home'>Entrar</Link>
           </div>
           <div className="regalo">
             <img src={mapa} alt="" className="iconosSection"/>
             <p className = "subtitle"> Envíos dentro de la zona metropolitana de Jalisco en cualquier momento. </p>
-            <Link to='/catalogo' className='btn'>Entrar</Link>
+            <Link to='/catalogo' className='btn btn-home'>Entrar</Link>
           </div>
           <div className="regalo">
             <img src={present} alt="" className="iconosSection"/>
             <p className="subtitle">Envía tus obsequios sin problemas desde donde estés.</p>
-            <Link to='/catalogo' className='btn'>Entrar</Link>
+            <Link to='/catalogo' className='btn btn-home'>Entrar</Link>
           </div>            
         </div>
-        <section className="imagen-nosotros">
-          <div className="contenedor">
-            <h2>Nosotros</h2>          
-            <p className="texNosotros"><span> ❝ </span>Somos un grupo de personas con pasión por el desarrollo web y nuevas tecnologías para el desarrollo... Nuestro proyecto fue inspirado en las necesidades que surgen al momento de querer hacer algún obsequio para alguna persona querida o especial, y no tienes el tiempo de hacer una compra de ese regalo o querer dar esa sorpresa a la persona que tanto quieres. <span> ❞ </span></p>
-          </div>
-        </section>
         <main className="seccion contenedor">
           <h2 className="tipo-productos">Tipos de Productos que podrias encontrar</h2>
           <div className="contenedor-anuncios">
@@ -85,7 +97,7 @@ export default class Home extends Component {
                 <div className="contenido-anuncio">
                   <h3>Playera con imagen de HTML estilo AC/DC</h3>
                   <p>$350.00</p>
-                  <Link to='/catalogo' className='btn'>Ver mas</Link>
+                  <Link to='/catalogo' className='btn btn-home'>Ver mas</Link>
                 </div>
             </div>
             
@@ -94,7 +106,7 @@ export default class Home extends Component {
                 <div className="contenido-anuncio">
                   <h3>Mono de Peluche con forma de lobo</h3>
                   <p>$750.00</p>
-                  <Link to='/catalogo' className='btn'>Ver mas</Link>
+                  <Link to='/catalogo' className='btn btn-home'>Ver mas</Link>
                 </div>
             </div>
             
@@ -103,7 +115,7 @@ export default class Home extends Component {
                 <div className="contenido-anuncio">
                   <h3>Fuko de Capitan America estilo Venom</h3>
                   <p>$2450.00</p>
-                  <Link to='/catalogo' className='btn'>Ver mas</Link>
+                  <Link to='/catalogo' className='btn btn-home'>Ver mas</Link>
                 </div>
             </div>
             
@@ -112,11 +124,17 @@ export default class Home extends Component {
                 <div className="contenido-anuncio">
                   <h3>Gorra para aplicar estampados</h3>
                   <p>$80.00</p>
-                  <Link to='/catalogo' className='btn'>Ver mas</Link>
+                  <Link to='/catalogo' className='btn btn-home'>Ver mas</Link>
                 </div>
             </div>
           </div>
         </main>
+        <section className="imagen-nosotros">
+          <div className="contenedor">
+            <h2>Nosotros</h2>          
+            <p className="texNosotros">Somos un grupo de personas con pasión por el desarrollo web y nuevas tecnologías para el desarrollo... Nuestro proyecto fue inspirado en las necesidades que surgen al momento de querer hacer algún obsequio para alguna persona querida o especial, y no tienes el tiempo de hacer una compra de ese regalo o querer dar esa sorpresa a la persona que tanto quieres...</p>
+          </div>
+        </section>
         <footer>  
           <div className="iconos-sociales">
             <img src={facebook} alt="" className="icon-media"/>
@@ -125,7 +143,7 @@ export default class Home extends Component {
             <img src={pinteres} alt="" className="icon-media"/>
           </div>
           <div className="derechos">
-            <p className="autores"> Idea Original, Creacion y Diseño de Equipo 6 de <img src={bedu} alt="" className="img-bedu"/></p>
+            <p className="autores"> Idea Original, Creacion y Diseño de Equipo 6 de  <img src={bedu} alt="" className="img-bedu"/></p>
           </div>
         </footer>
 
