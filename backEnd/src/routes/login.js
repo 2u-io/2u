@@ -17,7 +17,7 @@ router.post('/login', (request, response) => {
         }
         else {
             response.json({
-                id: document._id
+                _id: document._id
             });
         }
     })
