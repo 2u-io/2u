@@ -5,97 +5,54 @@ const productModel = require('../models/Products');
 
 const router = express.Router();
 
-// router.get('/store/:id/products', (request, response) => {
-//     if (!mongoose.Types.ObjectId.isValid(request.params.id)) {
-//         response.json({
-//             error: 'El ID de la tienda no es válido.'
-//         });
-//     }
-
-//     const query = {
-//         store_id: request.params.id
-//     };
-
-//     productModel.find(query, (error, products) => {
-//         if (error) {
-//             response.json({
-//                 error
-//             });
-//         }
-//         else if (products.length === 0) {
-//             response.json({
-//                 error: 'La tienda no posee productos registrados.'
-//             });
-//         }
-//         else {
-//             response.send(products);
-//         }
-//     });
-// });
-
 router.get('/store/:id/products', (request, response) => {
     if (!mongoose.Types.ObjectId.isValid(request.params.id)) {
         response.json({
-            error: 'El ID de la tienda no es válido.'
+            error: 'El ID no es válido.'
         });
     }
-
-    productModel.find({
-        store_id: request.param.id
-    })
-    .then(products => {
-        if (products) {
-        }
-        else {
-        }
-    })
-
-    const query = {
-        store_id: request.params.id
-    };
-
-    productModel.find(query, (error, products) => {
-        if (error) {
+    else {
+        productModel.find({
+            store_id: request.params.id
+        })
+        .then(products => {
+            if (products.length === 0) {
+                throw 'La tienda no posee productos registrados.'
+            }
+            else {
+                response.send(products);
+            }
+        })
+        .catch(error => {
             response.json({
                 error
             });
-        }
-        else if (products.length === 0) {
-            response.json({
-                error: 'La tienda no posee productos registrados.'
-            });
-        }
-        else {
-            response.send(products);
-        }
-    });
+        });
+    }
 });
 
 router.get('/products/:id', (request, response) => {
     if (!mongoose.Types.ObjectId.isValid(request.params.id)) {
         response.json({
-            error: 'El ID del producto no es válido.'
+            error: 'El ID no es válido.'
         });
     }
     else {
-        const query = {
+        productModel.findOne({
             _id: request.params.id
-        };
-    
-        productModel.findOne(query, (error, product) => {
-            if (error) {
-                response.json({
-                    error
-                });
-            }
-            else if (product === null) {
-                response.json({
-                    error: 'El producto no existe.'
-                });
+        })
+        .then(product => {
+            if (!product) {
+                throw 'El producto no existe.'
             }
             else {
                 response.send(product);
             }
+        })
+        .catch(error => {
+            response.json({
+                error
+            });
         });
     }
 });

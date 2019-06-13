@@ -1,6 +1,6 @@
 const express = require('express');
 
-const userModel = require('../models/user');
+const userModel = require('../models/Users');
 
 const router = express.Router();
 
@@ -9,7 +9,7 @@ router.post('/login', (request, response) => {
         username: request.body.username
     })
     .then(document => {
-        if (document === null) {
+        if (!document) {
             throw 'El usuario no es válido.';
         }
         else if (document.password !== request.body.password) {
