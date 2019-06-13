@@ -1,9 +1,9 @@
 import React from 'react';
 import {TextInput, Button, Icon} from 'react-materialize';
 
-const signIn = () => {
+const signUp = () => {
     return (
-        <div>
+        <div className='container'>
             <React.Fragment>
                 <h3>
                     Crea una cuenta gratis
@@ -31,4 +31,4 @@ const signIn = () => {
     );
 }
 
-export default signIn;
+export default signUp;
