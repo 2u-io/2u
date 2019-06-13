@@ -1,12 +1,21 @@
+/*importar fuentes*/
 @font-face{
   font-family: 'letraLogo';
   src: url(Components/fonts/RamadhanKareem.ttf), url(Components/fonts/RamadhanKareem.otf);
+}
+@font-face{
+  font-family: 'subtitulo';
+  src: url(Components/fonts/Roboto-Light.ttf);
+}
+@font-face{
+  font-family: 'cuerpo';
+  src: url(Components/fonts/Roboto-ThinItalic.ttf);
 }
 *{
   margin: 0;
   padding: 0;
 }
-
+/** Estilos globales **/
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -14,14 +23,42 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1 {
+  font-family: 'letraLogo';
+  color: lightcoral;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'letraLogo';
+  color: whitesmoke;
+  font-size: 5em;
+}
+
+img {
+  max-width: 100%;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*estilo para la imagen de fondo*/
+.imagen-fondo{
+  background-image: url(Components/image/portada.jpg);
+  background-position: center center;
+}
+
+.imagenGrande{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* estilos para el menu de navegacion*/
 .navTrans{
   background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
 }
 .logop{
   margin:.5rem 0 0 1rem;
@@ -29,23 +66,32 @@ code {
 }
 .brand-logo{
   width: 100px;
+  margin-left: 1.8rem;
 }
-.portada{
-  width: 100%;
-  height: 100vh;
-}
-.tarjetas{
-  margin-top: 5rem;
-}
-h1{
-  font-family: 'letraLogo';
-  color: lightcoral;  
-}
+
+/*estilos para los iconos de servicios*/
 .iconos{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+.regalo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subtitle{
+  margin-top: 1.5rem;
+  font-size: 1.3em;
+  color: lightcoral;
+  font-family: 'subtitulo';
+  font-weight: 400;
+  text-align: center;
+  width: 17rem;
+}
+.btn{
+  margin: 1rem;
 }
 
 @media screen and (min-width:768px){
@@ -53,4 +99,116 @@ h1{
     display: flex;
     flex-direction: row;
   }
+  .contenedor-anuncios {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Seccion de nosotros */
+.imagen-nosotros{
+  background-image: url(Components/image/equipo.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+
+.texNosotros{
+  color: whitesmoke;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'cuerpo';
+  font-weight: 600;
+}
+.texNosotros span{
+  font-size: 3rem;
+}
+/*seccion de tipos de producctos */
+.tipo-productos{
+  text-align: center;
+  font-family: 'letraLogo';
+  color: salmon;
+  font-size: 4em;
+  padding: 3rem;
+  margin: 5rem;
+}
+.contenedor-anuncios{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5rem;
+}
+@media screen and (min-width:768px) {
+    .contenedor-anuncios {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.anuncio{
+  flex-basis: calc(25% - 1rem);
+  border: 1px solid lightgray;
+  -webkit-box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+  -moz-box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+  box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+}
+.anuncio img{
+  width: 100%;
+}
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+.contenido-anuncio h3{
+  font-family: 'subtitulo';
+  color: salmon;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+.contenido-anuncio p {
+  font-family: 'subtitulo';
+  color: DARKTURQUOISE;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 1rem;
+}
+.btn{
+  width: 90%;
+}
+/*estilos para el footer*/
+footer{
+  padding: 2rem;
+  background-color: lightblue;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.iconos-sociales{
+  display: flex;
+  flex-basis: calc(25% - 1rem);
+  justify-content: space-around;
+}
+.icon-media{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.derechos{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 3rem;
+}
+.autores{
+  font-family: 'subtitulo';
+  color: salmon;
+  font-size: 1.5em;
+}
+.img-bedu{
+  width: 60px;
 }
