@@ -34,7 +34,8 @@ const Header = (props) => {
                         handleSubmitRegister={props.handleSubmitRegister}
                     />
                 </div>
-                <NavLink to="/catalogo" activeClassName="active">Tiendas</NavLink>
+                <NavLink to="/catalogo" activeClassName="active">Regalos</NavLink>
+                <NavLink to="/gifts/:id" activeClassName="active" >Productos</NavLink>
                 <NavLink to="/perfil" activeClassName="active" right>Perfil</NavLink>
                 <NavLink to="/shopcar" activeClassName="active" right>Carrito</NavLink>
             </Navbar>
