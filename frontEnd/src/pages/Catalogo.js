@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Components/Header'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import Loading from '../Components/Loading'
 
 export default class Catalogo extends Component {
@@ -27,17 +28,16 @@ export default class Catalogo extends Component {
                 <div class="col s2 m2">
                     <div class="card">
                         <div class="card-image">
-                            <img src={producto.url} alt='productos'/>
-                            <span class="card-title">{producto.title}</span>
+                            <img src={producto.url} alt='links'/>                            
                         </div>
                         <div class="card-content">
+                        <span>Lorem ipsum dolor</span>
                         </div>
                         <div class="card-action">
-                            <a href="/">{producto.thumbnailUrl}</a>
+                          <Link to='/' className='btn btn-home'>Ver Mas</Link>
                         </div>
                     </div>
                 </div>
-            <br/>
           </div>
         ))
     )

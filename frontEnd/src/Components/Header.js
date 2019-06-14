@@ -3,6 +3,7 @@ import {Link,NavLink} from 'react-router-dom';
 import {Navbar} from 'react-materialize';
 import logoP from './image/logo.png';
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 
 const Header = (props) => {
@@ -10,7 +11,7 @@ const Header = (props) => {
         <React.Fragment>
             <Navbar className='navTrans' brand={<Link to='/'><img src={logoP} alt="Logo" className="logop"/></Link>}  alignLinks="right">
                 <div>
-                    <NavLink to='/' onClick={props.onOpenModal} activeClassName="active">Inicia sesión</NavLink>
+                    <NavLink to='/' onClick={props.onOpenModal} activeClassName="active">{props.navState}</NavLink>
                     <SignIn 
                         isOpen={props.modalIsOpen}
                         onClose={props.onCloseModal}
@@ -19,8 +20,22 @@ const Header = (props) => {
                         handlePassword={props.handlePassword}
                     />
                 </div>
-                <NavLink to="/signup" activeClassName="active">Regístrate</NavLink>
-                <NavLink to="/catalogo" activeClassName="active">Tiendas</NavLink>
+                <div>
+                    <NavLink to="/" onClick={props.onOpenRModal} activeClassName="active">Regístrate</NavLink>
+                    <SignUp
+                        isOpen={props.registroModal}
+                        onClose={props.onCloseRModal}
+                        onClickRegister={props.handleRegister}
+                        handleUsername={props.handleUsername}
+                        handlePasswordRegister={props.handlePasswordRegister}
+                        handleName={props.handleName}
+                        handleLastName={props.handleLastName}
+                        handleEmail={props.handleEmail}
+                        handleSubmitRegister={props.handleSubmitRegister}
+                    />
+                </div>
+                <NavLink to="/catalogo" activeClassName="active">Regalos</NavLink>
+                <NavLink to="/gifts/:id" activeClassName="active" >Productos</NavLink>
                 <NavLink to="/perfil" activeClassName="active" right>Perfil</NavLink>
                 <NavLink to="/shopcar" activeClassName="active" right>Carrito</NavLink>
             </Navbar>

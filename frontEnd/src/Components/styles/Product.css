@@ -1,0 +1,34 @@
+.Product {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    margin: 5% 10% 1% 10%;
+   }
+
+.product-image {
+    height: 80%;
+    width: 80%;
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.box-image {
+    height: 100%;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.Price-color{
+    color: #00ced1;
+}
+
+.Main-color, h5{
+    color: #fa8072;
+}
+
+.btn{
+    background-color: #26a69a;
+}

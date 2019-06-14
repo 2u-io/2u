@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import './styles/Modal.css'
 
-const Modal = (props) => {
+const ModalRegistro = (props) => {
     if(!props.isOpen){
         return null
     }
@@ -16,8 +16,8 @@ const Modal = (props) => {
                 {props.children}
             </div>
         </div>,
-        document.getElementById('modal')
+        document.getElementById('modal_registro')
     )
 }
 
-export default Modal;
+export default ModalRegistro;
