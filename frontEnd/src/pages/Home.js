@@ -68,16 +68,31 @@ export default class Home extends Component {
       this.setState({password: e.target.value});
     }
   
-    handleSubmit=e=> {
-      console.log('A Username was submitted:'+this.state.user)
-      if(this.state.user==='pepe' && this.state.password==='12345'){
+    handleSubmit=async e=> {
+      const user = {
+        username: this.state.user,
+        password: this.state.password
+      }
+
+      const resp = await axios.post('/api/login', user)
+
+      if (resp.data.error) {
+        alert(resp.data.error)
+      } else {
         this.setState({modalIsOpen:false})
         this.setState({list:true})
-        this.setState({login:'pepe'})
-      }else{
-        alert('Usuario o contraseña incorrecta')
+        this.setState({login:resp.data.username})
       }
-      e.preventDefault();
+
+      // console.log('A Username was submitted:'+this.state.user)
+      // if(this.state.user==='pepe' && this.state.password==='12345'){
+      //   this.setState({modalIsOpen:false})
+      //   this.setState({list:true})
+      //   this.setState({login:'pepe'})
+      // }else{
+      //   alert('Usuario o contraseña incorrecta')
+      // }
+      // e.preventDefault();
     }
 
     handleOpenModal = e => {

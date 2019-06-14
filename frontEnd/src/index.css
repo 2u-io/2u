@@ -320,6 +320,9 @@ code {
   }
 }
 .anuncio{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   flex-basis: calc(25% - 1rem);
   border: 1px solid lightgray;
   -webkit-box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
@@ -328,6 +331,11 @@ code {
 }
 .anuncio img{
   width: 100%;
+}
+.contenido-anuncio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contenido-anuncio h3,
 .contenido-anuncio p {
@@ -342,14 +350,18 @@ code {
   font-weight: 600;
 }
 .contenido-anuncio p {
+  width: 100%;
   font-family: 'subtitulo';
   color: DARKTURQUOISE;
   font-size: 1.2em;
   text-align: left;
   padding: 1rem;
+  border-bottom: 1px solid lightgrey;
 }
 .btn{
-  width: 90%;
+  width: 80%;
+  margin: 2rem;
+  /* margin: 1rem 1rem; */
 }
 /*estilos para el footer*/
 footer{

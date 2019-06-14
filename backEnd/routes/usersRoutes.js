@@ -16,7 +16,8 @@ module.exports = (app) => {
             }
             else {
                 response.json({
-                    _id: user._id
+                    _id: user._id,
+                    username: user.username
                 });
             }
         })
