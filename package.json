@@ -1,0 +1,25 @@
+{
+    "name": "2u",
+    "version": "1.0.0",
+    "description": "Entrega y Empaque de Regalos",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev-server": "nodemon index.js",
+        "dev-client": "npm run start --prefix frontEnd",
+        "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontEnd && npm run build --prefix frontEnd"
+    },
+    "author": "Bedu - Equipo 6",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.5.15"
+    },
+    "devDependencies": {
+        "concurrently": "^4.1.0",
+        "nodemon": "^1.19.1"
+    }
+}

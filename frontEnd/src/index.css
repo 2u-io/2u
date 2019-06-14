@@ -1,0 +1,411 @@
+/*importar fuentes*/
+@font-face{
+  font-family: 'letraLogo';
+  src: url(Components/fonts/RamadhanKareem.ttf), url(Components/fonts/RamadhanKareem.otf);
+}
+@font-face{
+  font-family: 'subtitulo';
+  src: url(Components/fonts/Roboto-Light.ttf);
+}
+@font-face{
+  font-family: 'cuerpo';
+  src: url(Components/fonts/Roboto-ThinItalic.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+/** Estilos globales **/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-family: 'letraLogo';
+  color: lightcoral;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'letraLogo';
+  color: whitesmoke;
+  font-size: 5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*estilo para la imagen de fondo*/
+.hero{
+  background-image: url(Components/image/portada.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  animation-name: logo;
+  animation-duration: 10s;
+}
+.contenedor-h{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'letraLogo';
+  color: whitesmoke;
+  font-size: 5em;
+}
+.textCur{
+ height: 100px;
+ margin: 0;
+}
+.ideal{
+  animation-name: ideal;
+  animation-duration: 7s;
+  
+}
+.char1 {
+  transform: rotate(-33deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char2 {
+  transform: rotate(-26deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char3 {
+  transform: rotate(-14.5deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char4 {
+  transform: rotate(-8deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char5 {
+  transform: rotate(-5deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char6 {
+  transform: rotate(-1deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char7 {
+  transform: rotate(3deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char8 {
+  transform: rotate(6deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char9 {
+  transform: rotate(16deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char10 {
+  transform: rotate(20deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char11 {
+  transform: rotate(24deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char12 {
+  transform: rotate(27deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+.char13 {
+  transform: rotate(31deg);
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
+}
+/*animation para las letras*/
+@keyframes slogan{
+  0%{
+    font-size: 0em;
+  }
+  50% {
+    font-size: 1em;
+  }
+  100%{
+    font-size: 1em;
+  }
+}
+@keyframes ideal{
+  0%{
+    font-size: 0em;
+  }
+  50% {
+    font-size: 0em;
+  }
+  75%{
+    font-size: 1em;
+  }
+  100% {
+    font-size: 1em;
+  }
+}
+@keyframes logo{
+  0%{
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  750% {
+    width: 40%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+/* estilos para el menu de navegacion*/
+.navTrans{
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+.logop{
+  margin:.5rem 0 0 1rem;
+
+}
+.brand-logo{
+  width: 100px;
+  margin-left: 1.8rem;
+}
+
+/*estilos para los iconos de servicios*/
+.iconos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.regalo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subtitle{
+  margin-top: 1.5rem;
+  font-size: 1.3em;
+  color: lightcoral;
+  font-family: 'subtitulo';
+  font-weight: 400;
+  text-align: center;
+  width: 17rem;
+}
+.btn-home{
+  margin: 1rem;
+}
+
+@media screen and (min-width:768px){
+  .iconos{
+    display: flex;
+    flex-direction: row;
+  }
+  .contenedor-anuncios {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Seccion de nosotros */
+.imagen-nosotros{
+  background-image: url(Components/image/equipo.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+
+.texNosotros{
+  color: whitesmoke;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'cuerpo';
+  font-weight: 600;
+}
+/*seccion de tipos de producctos */
+.tipo-productos{
+  text-align: center;
+  font-family: 'letraLogo';
+  color: salmon;
+  font-size: 4em;
+  padding: 3rem;
+  margin: 5rem;
+}
+.contenedor-anuncios{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5rem;
+}
+@media screen and (min-width:768px) {
+    .contenedor-anuncios {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.anuncio{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-basis: calc(25% - 1rem);
+  border: 1px solid lightgray;
+  -webkit-box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+  -moz-box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+  box-shadow: -10px 13px 16px -8px rgba(191, 185, 191, 1);
+}
+.anuncio img{
+  width: 100%;
+}
+.contenido-anuncio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+.contenido-anuncio h3{
+  font-family: 'subtitulo';
+  color: salmon;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+.contenido-anuncio p {
+  width: 100%;
+  font-family: 'subtitulo';
+  color: DARKTURQUOISE;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+.btn{
+  width: 80%;
+  margin: 2rem;
+  /* margin: 1rem 1rem; */
+}
+/*estilos para el footer*/
+footer{
+  padding: 1rem;
+  background-color: lightblue;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.iconos-sociales{
+  display: flex;
+  flex-basis: calc(25% - 1rem);
+  justify-content: space-around;
+}
+.icon-media{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.derechos{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 3rem;
+}
+.autores{
+  font-family: 'subtitulo';
+  color: salmon;
+  font-size: 1.5em;
+}
+.img-bedu{
+  width: 60px;
+}
+.card{
+  top: 5.5rem;
+  margin-top: 1rem;
+}
+.card .card-image{
+  width: 100%;
+}
+.card .card-title{
+  font-size: 1em;
+  color: gray;
+}
+.card .card-action{
+  padding: 1rem;
+  font-size: 1em;
+}
