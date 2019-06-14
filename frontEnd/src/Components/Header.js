@@ -3,6 +3,7 @@ import {Link,NavLink} from 'react-router-dom';
 import {Navbar} from 'react-materialize';
 import logoP from './image/logo.png';
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 
 const Header = (props) => {
@@ -19,7 +20,20 @@ const Header = (props) => {
                         handlePassword={props.handlePassword}
                     />
                 </div>
-                <NavLink to="/signup" activeClassName="active">Regístrate</NavLink>
+                <div>
+                    <NavLink to="/" onClick={props.onOpenRModal} activeClassName="active">Regístrate</NavLink>
+                    <SignUp
+                        isOpen={props.registroModal}
+                        onClose={props.onCloseRModal}
+                        onClickRegister={props.handleRegister}
+                        handleUsername={props.handleUsername}
+                        handlePasswordRegister={props.handlePasswordRegister}
+                        handleName={props.handleName}
+                        handleLastName={props.handleLastName}
+                        handleEmail={props.handleEmail}
+                        handleSubmitRegister={props.handleSubmitRegister}
+                    />
+                </div>
                 <NavLink to="/catalogo" activeClassName="active">Tiendas</NavLink>
                 <NavLink to="/perfil" activeClassName="active" right>Perfil</NavLink>
                 <NavLink to="/shopcar" activeClassName="active" right>Carrito</NavLink>

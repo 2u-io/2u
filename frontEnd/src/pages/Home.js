@@ -25,15 +25,29 @@ export default class Home extends Component {
         this.state={
           productos:[],
           modalIsOpen:false,
+          registroModal:false,
           user:'',
-          password:''
+          password:'',
+          username:'',
+          passwordRegister:'',
+          name:'',
+          lastName:'',
+          email:'',
+          list:false,
         }
         this.handleOpenModal=this.handleOpenModal.bind(this);
         this.handleCloseModal=this.handleCloseModal.bind(this);
         this.handleUser = this.handleUser.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.onClickButton=this.onClickButton.bind(this)
+        this.handleOpenRModal = this.handleOpenRModal.bind(this);
+        this.handleCloseRModal = this.handleCloseRModal.bind(this);
+        this.handleSubmitRegister = this.handleSubmitRegister.bind(this);
+        this.handleUsername = this.handleUsername.bind(this);
+        this.handlePasswordRegister = this.handlePasswordRegister.bind(this);
+        this.handleName = this.handleName.bind(this);
+        this.handleLastName = this.handleLastName.bind(this);
+        this.handleEmail = this.handleEmail.bind(this);
     }
     
 
@@ -54,13 +68,13 @@ export default class Home extends Component {
     }
   
     handleSubmit=e=> {
-      alert('A name was submitted: ' + this.state.user);
       console.log('A Username was submitted:'+this.state.user)
-      console.log('A Password was submitted'+this.state.password)
-      e.preventDefault();
-    }
-
-    onClickButton =e=> {
+      if(this.state.user==='amilcaralex97' && this.state.password==='12345'){
+        this.setState({modalIsOpen:false})
+        this.setState({list:true})
+      }else{
+        alert('Usuario o contraseña incorrecta')
+      }
       e.preventDefault();
     }
 
@@ -72,11 +86,45 @@ export default class Home extends Component {
       this.setState({ modalIsOpen: false });
     };
 
-    
+    handleOpenRModal = e =>{
+      this.setState({registroModal:true})
+    }
+
+    handleCloseRModal = e =>{
+      this.setState({registroModal:false})
+    }
+
+    handleUsername = e =>{
+      this.setState({username: e.target.value});
+    }
+
+    handlePasswordRegister = e =>{
+      this.setState({passwordRegister: e.target.value});
+    }
+
+    handleName = e =>{
+      this.setState({name: e.target.value});
+    }
+
+    handleLastName = e =>{
+      this.setState({lastName: e.target.value});
+    }
+
+    handleEmail = e =>{
+      this.setState({email: e.target.value});
+    }
+
+    handleSubmitRegister=e=> {
+      console.log('A Username was submitted:'+this.state.username)
+      console.log('A Password was submitted'+this.state.passwordRegister)
+      e.preventDefault();
+      this.setState({registroModal:false})
+    }
+
   render() {
     return (
       <React.Fragment>
-        <header className="imagen-fondo">
+        <header className="header hero">
           <Header 
             onCloseModal={this.handleCloseModal}
             onOpenModal={this.handleOpenModal}
@@ -84,9 +132,36 @@ export default class Home extends Component {
             onClickLogin={this.handleSubmit}
             handleUser={this.handleUser}
             handlePassword={this.handlePassword}
+            onCloseRModal={this.handleCloseRModal}
+            onOpenRModal={this.handleOpenRModal}
+            registroModal={this.state.registroModal}
+            handleSubmitRegister={this.handleSubmitRegister}
+            handleEmail={this.handleEmail}
+            handleLastName={this.handleLastName}
+            handleName={this.handleName}
+            handlePasswordRegister={this.handlePasswordRegister}
+            handleUsername={this.handleUsername}
           />
-          <div className="imagenGrande">
-            <img src={logo} alt="" className="logoGrande"/>
+          <div className="header-contenido">
+            <div className="contenedor-h">
+              <p className="textCur">
+                <span className="char1">U</span>
+                <span className="char2">n</span>
+                <span className="char3">R</span>
+                <span className="char4">e</span>
+                <span className="char5">g</span>
+                <span className="char6">a</span>
+                <span className="char7">l</span>
+                <span className="char8">o</span>
+                <span className="char9">I</span>
+                <span className="char10">d</span>
+                <span className="char11">e</span>
+                <span className="char12">a</span>
+                <span className="char13">l</span>
+              </p>
+              <img src={logo} alt="" className="logo"/>
+              <p className="ideal">Para la Persona Ideal</p>
+            </div>
           </div>
         </header>
         <div className='welcome row'>
