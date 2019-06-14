@@ -11,7 +11,7 @@ const Header = (props) => {
         <React.Fragment>
             <Navbar className='navTrans' brand={<Link to='/'><img src={logoP} alt="Logo" className="logop"/></Link>}  alignLinks="right">
                 <div>
-                    <NavLink to='/' onClick={props.onOpenModal} activeClassName="active">Inicia sesión</NavLink>
+                    <NavLink to='/' onClick={props.onOpenModal} activeClassName="active">{props.navState}</NavLink>
                     <SignIn 
                         isOpen={props.modalIsOpen}
                         onClose={props.onCloseModal}

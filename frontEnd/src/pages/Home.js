@@ -34,6 +34,7 @@ export default class Home extends Component {
           lastName:'',
           email:'',
           list:false,
+          login:'Inicia sesión'
         }
         this.handleOpenModal=this.handleOpenModal.bind(this);
         this.handleCloseModal=this.handleCloseModal.bind(this);
@@ -69,9 +70,10 @@ export default class Home extends Component {
   
     handleSubmit=e=> {
       console.log('A Username was submitted:'+this.state.user)
-      if(this.state.user==='amilcaralex97' && this.state.password==='12345'){
+      if(this.state.user==='pepe' && this.state.password==='12345'){
         this.setState({modalIsOpen:false})
         this.setState({list:true})
+        this.setState({login:'pepe'})
       }else{
         alert('Usuario o contraseña incorrecta')
       }
@@ -141,6 +143,7 @@ export default class Home extends Component {
             handleName={this.handleName}
             handlePasswordRegister={this.handlePasswordRegister}
             handleUsername={this.handleUsername}
+            navState={this.state.login}
           />
           <div className="header-contenido">
             <div className="contenedor-h">
