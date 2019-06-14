@@ -26,12 +26,12 @@ require('./routes/tiesRoutes')(app);
 require('./routes/wrappingsRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
+    app.use(express.static('frontEnd/build'));
 
     const path = require('path');
 
     app.get('*', (request, response) => {
-        response.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
+        response.sendFile(path.resolve(__dirname, '../frontEnd', 'build', 'index.html'));
     });
 }
 
