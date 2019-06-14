@@ -7,16 +7,16 @@ module.exports = (app) => {
         Users.findOne({
             username: request.body.username
         })
-        .then(document => {
-            if (!document) {
+        .then(user => {
+            if (!user) {
                 throw 'El usuario no es válido.';
             }
-            else if (document.password !== request.body.password) {
+            else if (user.password !== request.body.password) {
                 throw 'La contraseña no es correcta.';
             }
             else {
                 response.json({
-                    _id: document._id
+                    _id: user._id
                 });
             }
         })

@@ -12,12 +12,14 @@ app.use(bodyParser.json());
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 require('./models/Users');
+require('./models/Stores');
 require('./models/Products');
 require('./models/Containers');
 require('./models/Ties');
 require('./models/Wrappings');
 
 require('./routes/usersRoutes')(app);
+require('./routes/storesRoutes')(app);
 require('./routes/productsRoutes')(app);
 require('./routes/containersRoutes')(app);
 require('./routes/tiesRoutes')(app);
