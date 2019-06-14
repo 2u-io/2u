@@ -75,68 +75,114 @@ code {
  height: 100px;
  margin: 0;
 }
-span {
-  position: absolute;
-  height: 400px;
-  transform-origin: bottom center;
-  animation-duration: 5s;
-  animation-name: slogan;
-}
 .ideal{
   animation-name: ideal;
   animation-duration: 7s;
+  
 }
 .char1 {
   transform: rotate(-33deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char2 {
   transform: rotate(-26deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char3 {
   transform: rotate(-14.5deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char4 {
   transform: rotate(-8deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char5 {
   transform: rotate(-5deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char6 {
   transform: rotate(-1deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char7 {
   transform: rotate(3deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char8 {
   transform: rotate(6deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char9 {
   transform: rotate(16deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char10 {
   transform: rotate(20deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char11 {
   transform: rotate(24deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char12 {
   transform: rotate(27deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 .char13 {
   transform: rotate(31deg);
-  
+  animation-duration: 5s;
+  animation-name: slogan; 
+  position: absolute;
+  height: 400px;
+  transform-origin: bottom center; 
 }
 /*animation para las letras*/
 @keyframes slogan{
@@ -335,4 +381,19 @@ footer{
 }
 .img-bedu{
   width: 60px;
+}
+.card{
+  top: 5.5rem;
+  margin-top: 1rem;
+}
+.card .card-image{
+  width: 100%;
+}
+.card .card-title{
+  font-size: 1em;
+  color: gray;
+}
+.card .card-action{
+  padding: 1rem;
+  font-size: 1em;
 }

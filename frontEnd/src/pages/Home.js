@@ -63,7 +63,7 @@ export default class Home extends Component {
         <div className='welcome row'>
             <div className="center-align">
                 <h1>
-                    Bienvenidoss a 2U
+                    Bienvenidos a 2U
                 </h1>
             </div>
         </div>
