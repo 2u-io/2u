@@ -1,108 +1,36 @@
-const express = require('express');
+require('dotenv').config();
+
 const bodyParser = require('body-parser');
-const MongoClient = require('mongodb').MongoClient;
+const express = require('express');
+const mongoose = require('mongoose');
+
 const app = express();
-const port = 5000;
 
-var url = "mongodb+srv://test:test@test-roa0y.mongodb.net/2u?retryWrites=true";
-
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/login', (req, res) => {
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
-        var dbo = db.db("2u");
+require('./models/Users');
+require('./models/Products');
+require('./models/Containers');
+require('./models/Ties');
+require('./models/Wrappings');
 
-        let query = {
-            username: req.body.username
-        }
+require('./routes/usersRoutes')(app);
+require('./routes/productsRoutes')(app);
+require('./routes/containersRoutes')(app);
+require('./routes/tiesRoutes')(app);
+require('./routes/wrappingsRoutes')(app);
 
-        dbo.collection("users").findOne(query, function (err, result) {
-            if (err) console.log(err);
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
 
-            if (!result) {
-                res.send({
-                    success: false,
-                    error: "Usuario no válido."
-                });
-            }
-            else if (result.password !== req.body.password) {
-                res.send({
-                    success: false,
-                    error: "Contraseña incorrecta."
-                });
-            }
-            else {
-                res.send({
-                    success: true,
-                    id: result._id
-                });
-            }
+    const path = require('path');
 
-            db.close();
-        });
+    app.get('*', (request, response) => {
+        response.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
     });
-});
+}
 
-app.get('/stores', (req, res) => {
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-
-        var dbo = db.db("2u");
-
-        dbo.collection("stores").find({}).toArray(function (err, result) {
-            if (err) console.log(err);
-
-            if (!result) {
-                res.send({
-                    success: false,
-                    error: "No existen tiendas en la base de datos."
-                });
-            }
-            else {
-                res.send({
-                    success: true,
-                    stores: result
-                });
-            }
-
-            db.close();
-        });
-    });
-});
-
-app.get('/products/:id', (req, res) => {
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-
-        var dbo = db.db("2u");
-
-        let query = {
-            store_id: req.params.id
-        }
-
-        dbo.collection("products").find(query).toArray(function (err, result) {
-            if (err) console.log(err);
-
-            if (!result.length) {
-                res.send({
-                    success: false,
-                    error: "La tienda no tiene productos."
-                });
-            }
-            else {
-                res.send({
-                    success: true,
-                    products: result
-                });
-            }
-
-            db.close();
-        });
-    });
-});
-
-app.listen(port, () => {
-    console.log('Server online on port', port);
-});
+app.listen(process.env.PORT);

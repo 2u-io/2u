@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const storeSchema = new Schema({
-    id: String,
+const containersSchema = new Schema({
     name: String,
+    price: Number,
     image_url: String
 });
 
-module.exports = mongoose.model('Stores', storeSchema);
+mongoose.model('containers', containersSchema);

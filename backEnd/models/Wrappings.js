@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const giftTieSchema = new Schema({
-    id: String,
+const wrappingsSchema = new Schema({
     name: String,
     color: String,
     price: Number,
     image_url: String
 });
 
-module.exports = mongoose.model('GiftTies', giftTieSchema);
+mongoose.model('wrappings', wrappingsSchema);
